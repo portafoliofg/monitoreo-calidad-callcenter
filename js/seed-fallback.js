@@ -139,6 +139,11 @@ const SEED_FALLBACK = {
       "fechaIngreso": "2025-12-01"
     }
   ],
+  "evaluadores": [
+    "Romina Castex",
+    "Gastón Villalba",
+    "Paola Nervi"
+  ],
   "evaluaciones": [
     {
       "id": "ev-0042",
