@@ -45,16 +45,23 @@
   }
 
   async function iniciar() {
-    Toast.iniciar();
-    Feedback.iniciar();
-    await Datos.inicializar();
-
-    VistaEvaluacion.iniciar();
-    Panel.iniciar();
-    Historial.iniciar();
-
+    // La navegación y el botón de restablecer no dependen de los datos:
+    // se activan primero para que la app responda aunque falle algo más
+    // abajo (por ejemplo, si la librería de gráficos no llegó a cargar).
     iniciarNavegacion();
     iniciarBotonRestablecer();
+    Toast.iniciar();
+    Feedback.iniciar();
+
+    await Datos.inicializar();
+
+    [VistaEvaluacion, Panel, Historial].forEach(function (vista) {
+      try {
+        vista.iniciar();
+      } catch (error) {
+        console.error("No se pudo inicializar una vista:", error);
+      }
+    });
   }
 
   document.addEventListener("DOMContentLoaded", iniciar);

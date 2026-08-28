@@ -185,14 +185,10 @@ const VistaEvaluacion = (function () {
     const guardada = Datos.agregarEvaluacion(nuevaEvaluacion);
     Toast.mostrar("Evaluación guardada.");
 
-    if (window.Panel) {
-      Panel.actualizarSelectores();
-      Panel.render();
-    }
-    if (window.Historial) {
-      Historial.actualizarSelectores();
-      Historial.render();
-    }
+    Panel.actualizarSelectores();
+    Panel.render();
+    Historial.actualizarSelectores();
+    Historial.render();
 
     Feedback.abrir(guardada);
 

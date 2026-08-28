@@ -61,7 +61,14 @@ const Feedback = (function () {
     });
 
     const fortalezas = ordenDesc.slice(0, 2);
-    const oportunidades = ordenAsc.slice(0, 2);
+    const nombresFortalezas = fortalezas.map(function (f) {
+      return f.nombre;
+    });
+    const oportunidades = ordenAsc
+      .filter(function (item) {
+        return nombresFortalezas.indexOf(item.nombre) === -1;
+      })
+      .slice(0, 2);
 
     const nombrePila = asesor ? primerNombre(asesor.nombre) : "equipo";
 
@@ -101,10 +108,14 @@ const Feedback = (function () {
     });
     lineas.push("");
 
-    lineas.push("Oportunidades de mejora:");
-    oportunidades.forEach(function (o) {
-      lineas.push("- " + o.nombre + " (" + o.puntaje + "/100)");
-    });
+    if (oportunidades.length > 0) {
+      lineas.push("Oportunidades de mejora:");
+      oportunidades.forEach(function (o) {
+        lineas.push("- " + o.nombre + " (" + o.puntaje + "/100)");
+      });
+    } else {
+      lineas.push("Sin oportunidades de mejora puntuales: los criterios estuvieron parejos en esta llamada.");
+    }
 
     if (evaluacion.comentarioGeneral) {
       lineas.push("");

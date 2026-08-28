@@ -367,6 +367,15 @@ textarea:focus {
   outline-offset: 1px;
 }
 
+input[type="range"],
+input[type="checkbox"] {
+  accent-color: var(--color-primary);
+}
+
+.criterio-item__critico input[type="checkbox"] {
+  accent-color: var(--color-danger);
+}
+
 /* ---------- Tablas ---------- */
 
 .table-wrap {

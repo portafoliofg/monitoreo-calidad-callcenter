@@ -8,8 +8,11 @@ const Panel = (function () {
   let inputHasta;
   let kpiGrid;
   let tablaAsesores;
+  let canvasEvolucion;
+  let canvasEquipos;
   let chartEvolucion;
   let chartEquipos;
+  let hayLibreriaGraficos;
 
   const COLOR_PRIMARIO = "#2e5f63";
   const COLOR_ACENTO = "#d97757";
@@ -21,6 +24,13 @@ const Panel = (function () {
     inputHasta = document.getElementById("panel-filtro-hasta");
     kpiGrid = document.getElementById("panel-kpis");
     tablaAsesores = document.getElementById("panel-tabla-asesores");
+    canvasEvolucion = document.getElementById("grafico-evolucion");
+    canvasEquipos = document.getElementById("grafico-equipos");
+    hayLibreriaGraficos = typeof Chart !== "undefined";
+
+    if (!hayLibreriaGraficos) {
+      console.warn("Chart.js no está disponible: el panel muestra métricas sin gráficos.");
+    }
 
     actualizarSelectores();
 
@@ -176,8 +186,13 @@ const Panel = (function () {
   }
 
   function renderGraficoEvolucion(filtro) {
+    if (!hayLibreriaGraficos) {
+      mostrarAvisoSinGraficos(canvasEvolucion);
+      return;
+    }
+
     const serie = Datos.serieTemporal(filtro);
-    const contexto = document.getElementById("grafico-evolucion").getContext("2d");
+    const contexto = canvasEvolucion.getContext("2d");
 
     const labels = serie.map(function (punto) {
       return Datos.formatearFecha(punto.semana);
@@ -220,9 +235,14 @@ const Panel = (function () {
   }
 
   function renderGraficoEquipos(filtro) {
+    if (!hayLibreriaGraficos) {
+      mostrarAvisoSinGraficos(canvasEquipos);
+      return;
+    }
+
     const filtroSinEquipo = Object.assign({}, filtro, { equipoId: null });
     const filas = Datos.metricasPorEquipo(filtroSinEquipo);
-    const contexto = document.getElementById("grafico-equipos").getContext("2d");
+    const contexto = canvasEquipos.getContext("2d");
 
     if (chartEquipos) {
       chartEquipos.destroy();
@@ -256,6 +276,20 @@ const Panel = (function () {
         },
       },
     });
+  }
+
+  function mostrarAvisoSinGraficos(canvas) {
+    const wrap = canvas.parentElement;
+    if (wrap.dataset.avisoGraficos) {
+      return;
+    }
+    wrap.dataset.avisoGraficos = "1";
+    canvas.style.display = "none";
+    const aviso = document.createElement("p");
+    aviso.className = "empty-state";
+    aviso.textContent =
+      "No se pudo cargar la librería de gráficos (revisá tu conexión). El resto del panel funciona igual.";
+    wrap.appendChild(aviso);
   }
 
   return { iniciar: iniciar, render: render, actualizarSelectores: actualizarSelectores };
