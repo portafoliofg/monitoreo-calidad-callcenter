@@ -158,6 +158,45 @@ python3 -m http.server 8000
 
 y entrar a `http://localhost:8000`.
 
+## Escalabilidad: de demo a producción
+
+Esta versión es deliberadamente client-only: sirve para mostrar el diseño
+de producto y las decisiones de arquitectura sin la complejidad de un
+backend, pero tiene límites claros a propósito —los datos viven en el
+navegador de cada persona, no hay usuarios ni permisos, y no está pensada
+para el volumen real de un call center con decenas de evaluadores
+trabajando en simultáneo. Si este proyecto tuviera que crecer, el camino
+que seguiría es:
+
+- **Backend y base de datos real.** Reemplazar `localStorage` por una API
+  (Node/Express o Python/FastAPI, por ejemplo) sobre Postgres. El diseño
+  actual ya separa esto: `js/datos.js` es la única capa que toca el
+  estado de la app, así que cambiar la persistencia implica reescribir
+  esa capa, no las vistas que la consumen.
+- **Autenticación y roles.** Evaluador, supervisor y asesor con permisos
+  distintos: un asesor vería solo su propio feedback, no el de sus
+  compañeros; un supervisor, solo el de su equipo.
+- **Multi-tenant.** Para que esto sirva a más de un call center a la vez,
+  aislar los datos por organización desde el modelo, no solo con filtros
+  en el front.
+- **Grabaciones y transcripción asistida.** Vincular cada evaluación a la
+  grabación real de la llamada y explorar transcripción automática (ASR)
+  para sugerir un score preliminar que el evaluador humano confirma o
+  corrige —como apoyo, no como reemplazo de su criterio.
+- **Reportes y consistencia entre evaluadores.** Exportar a PDF/Excel para
+  gerencia, comparar períodos, y medir qué tan parejo puntúa cada
+  evaluador respecto al resto (inter-rater reliability), algo difícil de
+  ver a ojo con una planilla suelta.
+- **Notificaciones.** Avisar al asesor por mail o Slack cuando tiene
+  feedback nuevo, y recordar evaluaciones pendientes a los supervisores.
+- **Rendimiento a escala.** Hoy el historial y las métricas se calculan en
+  el cliente porque son ~60 evaluaciones; con miles, eso se mueve al
+  backend: paginado, índices por fecha/asesor/equipo, y métricas
+  precalculadas en vez de recalculadas en cada render.
+- **CI/CD.** Formalizar como pipeline las pruebas end-to-end que usé para
+  testear esta versión (Playwright contra un servidor local), corriendo
+  en cada cambio antes de mergear.
+
 ## Licencia
 
 MIT. Ver [LICENSE](LICENSE).
