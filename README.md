@@ -4,7 +4,7 @@ App web para evaluar llamadas de un call center, ver métricas de calidad por
 asesor y por equipo, y generar feedback listo para compartir. Corre 100% en
 el navegador, sin backend ni build: se abre `index.html` y funciona.
 
-**Demo:** _(se agrega el link una vez publicado en GitHub Pages)_
+**Demo:** https://tapiceriamiguelangel-eclat.github.io/monitoreo-calidad-callcenter/
 
 > Proyecto de portafolio. Todos los nombres, equipos y evaluaciones son
 > datos ficticios generados para la demo.
