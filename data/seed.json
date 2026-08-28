@@ -1,0 +1,2604 @@
+{
+  "equipos": [
+    {
+      "id": "eq-atencion",
+      "nombre": "Atención al Cliente"
+    },
+    {
+      "id": "eq-ventas",
+      "nombre": "Ventas"
+    },
+    {
+      "id": "eq-soporte",
+      "nombre": "Soporte Técnico"
+    },
+    {
+      "id": "eq-retencion",
+      "nombre": "Retención"
+    }
+  ],
+  "criterios": [
+    {
+      "id": "apertura",
+      "nombre": "Apertura y presentación",
+      "peso": 10,
+      "descripcion": "Saludo, identificación del asesor y de la empresa, tono inicial."
+    },
+    {
+      "id": "verificacion",
+      "nombre": "Verificación de datos",
+      "peso": 10,
+      "descripcion": "Confirmación de identidad y datos del cliente antes de avanzar."
+    },
+    {
+      "id": "escucha",
+      "nombre": "Escucha activa y empatía",
+      "peso": 20,
+      "descripcion": "Comprensión del reclamo o consulta, tono empático, sin interrupciones."
+    },
+    {
+      "id": "precision",
+      "nombre": "Precisión de la información",
+      "peso": 25,
+      "descripcion": "Exactitud de los datos brindados y claridad en la explicación."
+    },
+    {
+      "id": "objeciones",
+      "nombre": "Manejo de objeciones",
+      "peso": 15,
+      "descripcion": "Capacidad de resolver dudas o reclamos sin perder el control de la llamada."
+    },
+    {
+      "id": "cierre",
+      "nombre": "Cierre y confirmación",
+      "peso": 10,
+      "descripcion": "Resumen de lo resuelto y confirmación de conformidad del cliente."
+    },
+    {
+      "id": "protocolo",
+      "nombre": "Adherencia a protocolo",
+      "peso": 10,
+      "descripcion": "Cumplimiento de guiones obligatorios y normativa de compliance."
+    }
+  ],
+  "asesores": [
+    {
+      "id": "ase-01",
+      "nombre": "Lucía Fernández",
+      "equipoId": "eq-atencion",
+      "fechaIngreso": "2023-01-01"
+    },
+    {
+      "id": "ase-02",
+      "nombre": "Martín Ibarra",
+      "equipoId": "eq-ventas",
+      "fechaIngreso": "2024-02-01"
+    },
+    {
+      "id": "ase-03",
+      "nombre": "Camila Souza",
+      "equipoId": "eq-soporte",
+      "fechaIngreso": "2025-03-01"
+    },
+    {
+      "id": "ase-04",
+      "nombre": "Nicolás Pereyra",
+      "equipoId": "eq-retencion",
+      "fechaIngreso": "2023-04-01"
+    },
+    {
+      "id": "ase-05",
+      "nombre": "Valentina Acosta",
+      "equipoId": "eq-atencion",
+      "fechaIngreso": "2024-05-01"
+    },
+    {
+      "id": "ase-06",
+      "nombre": "Tomás Bianchi",
+      "equipoId": "eq-ventas",
+      "fechaIngreso": "2025-06-01"
+    },
+    {
+      "id": "ase-07",
+      "nombre": "Julieta Correa",
+      "equipoId": "eq-soporte",
+      "fechaIngreso": "2023-07-01"
+    },
+    {
+      "id": "ase-08",
+      "nombre": "Federico Lasala",
+      "equipoId": "eq-retencion",
+      "fechaIngreso": "2024-08-01"
+    },
+    {
+      "id": "ase-09",
+      "nombre": "Agustina Molina",
+      "equipoId": "eq-atencion",
+      "fechaIngreso": "2025-09-01"
+    },
+    {
+      "id": "ase-10",
+      "nombre": "Bruno Estévez",
+      "equipoId": "eq-ventas",
+      "fechaIngreso": "2023-10-01"
+    },
+    {
+      "id": "ase-11",
+      "nombre": "Marina Torréns",
+      "equipoId": "eq-soporte",
+      "fechaIngreso": "2024-11-01"
+    },
+    {
+      "id": "ase-12",
+      "nombre": "Ezequiel Duarte",
+      "equipoId": "eq-retencion",
+      "fechaIngreso": "2025-12-01"
+    }
+  ],
+  "evaluaciones": [
+    {
+      "id": "ev-0042",
+      "asesorId": "ase-09",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-03-31",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 96,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 79,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 84,
+          "errorCritico": true
+        }
+      ],
+      "comentarioGeneral": "Buen manejo del tono y ritmo de la llamada. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0043",
+      "asesorId": "ase-10",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-04-01",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 100,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 84,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Buen manejo del tono y ritmo de la llamada. Explicó la solución con mucha claridad."
+    },
+    {
+      "id": "ev-0051",
+      "asesorId": "ase-11",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-04-02",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 61,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 70,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 76,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 49,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 62,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 57,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 79,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "La explicación quedó poco clara para el cliente. Podría escuchar más antes de ofrecer una solución."
+    },
+    {
+      "id": "ev-0030",
+      "asesorId": "ase-07",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-04-03",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 95,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 92,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0037",
+      "asesorId": "ase-08",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-04-04",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 98,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 100,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0048",
+      "asesorId": "ase-11",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-04-04",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 63,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 96,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 67,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 65,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 51,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 71,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Podría escuchar más antes de ofrecer una solución. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0055",
+      "asesorId": "ase-12",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-04-04",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 47,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 40,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 39,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 71,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 38,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 38,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 63,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se apuró en el cierre sin resumir lo hablado."
+    },
+    {
+      "id": "ev-0004",
+      "asesorId": "ase-02",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-04-05",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 98,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 63,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 93,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Cerró la llamada confirmando cada punto resuelto."
+    },
+    {
+      "id": "ev-0012",
+      "asesorId": "ase-03",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-04-09",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 77,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se notó preparación previa al llamado. Explicó la solución con mucha claridad."
+    },
+    {
+      "id": "ev-0031",
+      "asesorId": "ase-07",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-04-10",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 80,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 95,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 80,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Cerró la llamada confirmando cada punto resuelto."
+    },
+    {
+      "id": "ev-0006",
+      "asesorId": "ase-02",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-04-15",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 86,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0010",
+      "asesorId": "ase-03",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-04-15",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 87,
+          "errorCritico": true
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 78,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 89,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Omitió un paso obligatorio del protocolo de compliance. Cerró la llamada confirmando cada punto resuelto."
+    },
+    {
+      "id": "ev-0026",
+      "asesorId": "ase-06",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-04-16",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 69,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 69,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 68,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 77,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 95,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0034",
+      "asesorId": "ase-07",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-04-24",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 73,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 95,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0047",
+      "asesorId": "ase-10",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-04-26",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 94,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0044",
+      "asesorId": "ase-10",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-04-29",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 87,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Cerró la llamada confirmando cada punto resuelto."
+    },
+    {
+      "id": "ev-0024",
+      "asesorId": "ase-06",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-05-05",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 95,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0056",
+      "asesorId": "ase-12",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-05-09",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 71,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 48,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 47,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 35,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 55,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 75,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 39,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "La explicación quedó poco clara para el cliente. Le faltó confirmar los datos antes de avanzar."
+    },
+    {
+      "id": "ev-0008",
+      "asesorId": "ase-03",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-05-16",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 62,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0007",
+      "asesorId": "ase-02",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-05-18",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 96,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 80,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 60,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 70,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 68,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 98,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Le faltó confirmar los datos antes de avanzar."
+    },
+    {
+      "id": "ev-0005",
+      "asesorId": "ase-02",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-05-22",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 80,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 100,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 100,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 85,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se notó preparación previa al llamado. Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0036",
+      "asesorId": "ase-08",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-05-23",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 98,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 95,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0045",
+      "asesorId": "ase-10",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-05-31",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 98,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 80,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 92,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0049",
+      "asesorId": "ase-11",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-05-31",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 64,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 65,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 74,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 78,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 79,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se apuró en el cierre sin resumir lo hablado."
+    },
+    {
+      "id": "ev-0033",
+      "asesorId": "ase-07",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-02",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 98,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 92,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0054",
+      "asesorId": "ase-12",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-03",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 40,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 40,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 54,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 44,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 63,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 65,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "La explicación quedó poco clara para el cliente. No siguió el guion obligatorio de apertura."
+    },
+    {
+      "id": "ev-0053",
+      "asesorId": "ase-11",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-06-05",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 62,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 71,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 64,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 77,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Le faltó confirmar los datos antes de avanzar."
+    },
+    {
+      "id": "ev-0050",
+      "asesorId": "ase-11",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-07",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 75,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 69,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 78,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 44,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 62,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 74,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Le faltó confirmar los datos antes de avanzar."
+    },
+    {
+      "id": "ev-0028",
+      "asesorId": "ase-06",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-11",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 68,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 73,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 100,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Cerró la llamada confirmando cada punto resuelto. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0023",
+      "asesorId": "ase-05",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-12",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 71,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 95,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 96,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 98,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se notó preparación previa al llamado. Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0016",
+      "asesorId": "ase-04",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-13",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 47,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 41,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 63,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 52,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 41,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 45,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 51,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "No siguió el guion obligatorio de apertura. La explicación quedó poco clara para el cliente."
+    },
+    {
+      "id": "ev-0002",
+      "asesorId": "ase-01",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-06-18",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 38,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 46,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 58,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 47,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 54,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 41,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 59,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Le faltó confirmar los datos antes de avanzar. Le faltó confirmar los datos antes de avanzar."
+    },
+    {
+      "id": "ev-0019",
+      "asesorId": "ase-05",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-19",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 67,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 98,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Llamada dentro de los parámetros esperados."
+    },
+    {
+      "id": "ev-0014",
+      "asesorId": "ase-04",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-06-21",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 62,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 49,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 47,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 43,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 61,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 38,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 53,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se apuró en el cierre sin resumir lo hablado. Se apuró en el cierre sin resumir lo hablado."
+    },
+    {
+      "id": "ev-0015",
+      "asesorId": "ase-04",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-06-22",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 58,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 51,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 57,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 52,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 58,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 37,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 54,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "La explicación quedó poco clara para el cliente. La explicación quedó poco clara para el cliente."
+    },
+    {
+      "id": "ev-0032",
+      "asesorId": "ase-07",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-28",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 82,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0009",
+      "asesorId": "ase-03",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-06-29",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 72,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 95,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 78,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 96,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Cerró la llamada confirmando cada punto resuelto. Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0035",
+      "asesorId": "ase-08",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-06-29",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 98,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 62,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se notó preparación previa al llamado. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0003",
+      "asesorId": "ase-01",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-06-30",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 61,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 56,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 40,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 72,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 64,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 56,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 60,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Podría escuchar más antes de ofrecer una solución. Le faltó confirmar los datos antes de avanzar."
+    },
+    {
+      "id": "ev-0018",
+      "asesorId": "ase-05",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-07-03",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 96,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 88,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0027",
+      "asesorId": "ase-06",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-07-12",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 96,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 98,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Cerró la llamada confirmando cada punto resuelto. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0052",
+      "asesorId": "ase-11",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-07-19",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 73,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 80,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 70,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 64,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 44,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se notó preparación previa al llamado. Cerró la llamada confirmando cada punto resuelto."
+    },
+    {
+      "id": "ev-0022",
+      "asesorId": "ase-05",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-07-20",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 98,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 98,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 63,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Llamada dentro de los parámetros esperados."
+    },
+    {
+      "id": "ev-0038",
+      "asesorId": "ase-09",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-07-26",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 97,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0041",
+      "asesorId": "ase-09",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-07-28",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 61,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 78,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 78,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 70,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 64,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Explicó la solución con mucha claridad."
+    },
+    {
+      "id": "ev-0029",
+      "asesorId": "ase-07",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-07-30",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 95,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 81,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0040",
+      "asesorId": "ase-09",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-07-30",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 95,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 81,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Cerró la llamada confirmando cada punto resuelto. Se notó preparación previa al llamado."
+    },
+    {
+      "id": "ev-0025",
+      "asesorId": "ase-06",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-08-05",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 98,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Explicó la solución con mucha claridad."
+    },
+    {
+      "id": "ev-0046",
+      "asesorId": "ase-10",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-08-05",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 90,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 82,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 81,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 95,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 83,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se notó preparación previa al llamado. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0017",
+      "asesorId": "ase-04",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-08-07",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 45,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 42,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 42,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 59,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 53,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 42,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 62,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Se apuró en el cierre sin resumir lo hablado. No siguió el guion obligatorio de apertura."
+    },
+    {
+      "id": "ev-0013",
+      "asesorId": "ase-03",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-08-19",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 61,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 86,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 93,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Le faltó confirmar los datos antes de avanzar."
+    },
+    {
+      "id": "ev-0001",
+      "asesorId": "ase-01",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-08-22",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 56,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 53,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 51,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 57,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 42,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 35,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 70,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Le faltó confirmar los datos antes de avanzar. Podría escuchar más antes de ofrecer una solución."
+    },
+    {
+      "id": "ev-0021",
+      "asesorId": "ase-05",
+      "evaluador": "Romina Castex",
+      "fecha": "2026-08-22",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 85,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 67,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 79,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Excelente empatía frente al reclamo del cliente. Excelente empatía frente al reclamo del cliente."
+    },
+    {
+      "id": "ev-0020",
+      "asesorId": "ase-05",
+      "evaluador": "Paola Nervi",
+      "fecha": "2026-08-23",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 89,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 92,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 92,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0039",
+      "asesorId": "ase-09",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-08-25",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 88,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 91,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 99,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 94,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 93,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 89,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Buen manejo del tono y ritmo de la llamada."
+    },
+    {
+      "id": "ev-0011",
+      "asesorId": "ase-03",
+      "evaluador": "Gastón Villalba",
+      "fecha": "2026-08-26",
+      "criterios": [
+        {
+          "criterioId": "apertura",
+          "puntaje": 83,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "verificacion",
+          "puntaje": 84,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "escucha",
+          "puntaje": 87,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "precision",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "objeciones",
+          "puntaje": 100,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "cierre",
+          "puntaje": 97,
+          "errorCritico": false
+        },
+        {
+          "criterioId": "protocolo",
+          "puntaje": 84,
+          "errorCritico": false
+        }
+      ],
+      "comentarioGeneral": "Explicó la solución con mucha claridad. Explicó la solución con mucha claridad."
+    }
+  ]
+}
