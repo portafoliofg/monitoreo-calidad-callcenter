@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoreo de Calidad · Call Center</title>
+    <meta
+      name="description"
+      content="App de monitoreo de calidad para call center: evaluación de llamadas, panel de métricas y generador de feedback. Datos de ejemplo ficticios."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header__inner">
+        <div class="app-brand">
+          <svg
+            class="app-brand__mark"
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect x="1" y="13" width="4" height="8" rx="2" fill="currentColor" />
+            <rect x="8" y="7" width="4" height="20" rx="2" fill="currentColor" />
+            <rect x="15" y="2" width="4" height="30" rx="2" fill="currentColor" />
+            <rect x="22" y="9" width="4" height="16" rx="2" fill="currentColor" />
+            <rect x="29" y="13" width="4" height="8" rx="2" fill="currentColor" />
+          </svg>
+          <div class="app-brand__text">
+            <h1>Monitoreo de Calidad</h1>
+            <p>Call center · evaluación de llamadas y feedback</p>
+          </div>
+        </div>
+        <div class="app-actions">
+          <button id="btn-restablecer" class="btn btn-secondary" type="button">
+            Restablecer datos de ejemplo
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="app-nav">
+      <div class="app-nav__inner">
+        <button class="app-nav__tab is-active" data-vista="panel" type="button">
+          Panel
+        </button>
+        <button class="app-nav__tab" data-vista="evaluacion" type="button">
+          Nueva evaluación
+        </button>
+        <button class="app-nav__tab" data-vista="historial" type="button">
+          Historial
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ===================== VISTA: PANEL ===================== -->
+      <section id="vista-panel" class="view is-active">
+        <div class="view-header">
+          <div>
+            <h2>Panel de calidad</h2>
+            <p class="subtitle">
+              Métricas agregadas por asesor y por equipo, con evolución en el
+              tiempo.
+            </p>
+          </div>
+        </div>
+
+        <div class="filters-row" id="panel-filtros">
+          <label>
+            Equipo
+            <select id="panel-filtro-equipo">
+              <option value="">Todos</option>
+            </select>
+          </label>
+          <label>
+            Asesor
+            <select id="panel-filtro-asesor">
+              <option value="">Todos</option>
+            </select>
+          </label>
+          <label>
+            Desde
+            <input type="date" id="panel-filtro-desde" />
+          </label>
+          <label>
+            Hasta
+            <input type="date" id="panel-filtro-hasta" />
+          </label>
+        </div>
+
+        <div class="kpi-grid" id="panel-kpis"></div>
+
+        <div class="panel-grid">
+          <div class="card">
+            <h3 class="card-title">Evolución del score promedio</h3>
+            <div class="chart-wrap">
+              <canvas id="grafico-evolucion"></canvas>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Score promedio por equipo</h3>
+            <div class="chart-wrap">
+              <canvas id="grafico-equipos"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Ranking por asesor</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Asesor</th>
+                  <th>Equipo</th>
+                  <th>Evaluaciones</th>
+                  <th>Score promedio</th>
+                  <th>Tendencia</th>
+                  <th>Última evaluación</th>
+                </tr>
+              </thead>
+              <tbody id="panel-tabla-asesores"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== VISTA: EVALUACIÓN ===================== -->
+      <section id="vista-evaluacion" class="view">
+        <div class="view-header">
+          <div>
+            <h2>Nueva evaluación</h2>
+            <p class="subtitle">
+              Completá los criterios; el score se calcula solo, en base a los
+              pesos definidos.
+            </p>
+          </div>
+        </div>
+
+        <form id="form-evaluacion">
+          <div class="card">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="eval-asesor">Asesor evaluado</label>
+                <select id="eval-asesor" required></select>
+              </div>
+              <div class="form-field">
+                <label for="eval-evaluador">Evaluador/a</label>
+                <select id="eval-evaluador" required></select>
+              </div>
+              <div class="form-field">
+                <label for="eval-fecha">Fecha de la llamada</label>
+                <input type="date" id="eval-fecha" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Criterios ponderados</h3>
+            <div id="lista-criterios"></div>
+          </div>
+
+          <div class="card">
+            <div class="form-field">
+              <label for="eval-comentario">Comentario general (opcional)</label>
+              <textarea
+                id="eval-comentario"
+                rows="3"
+                placeholder="Notas adicionales sobre la llamada..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="score-live" id="score-live">
+            <div>
+              <div class="score-live__label">Score final</div>
+              <div class="score-live__value" id="score-live-valor">0</div>
+            </div>
+            <div id="score-live-aviso"></div>
+            <div>
+              <button type="button" id="btn-cancelar-eval" class="btn btn-ghost">
+                Limpiar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Guardar evaluación
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- ===================== VISTA: HISTORIAL ===================== -->
+      <section id="vista-historial" class="view">
+        <div class="view-header">
+          <div>
+            <h2>Historial de evaluaciones</h2>
+            <p class="subtitle">
+              Todas las evaluaciones registradas. Hacé clic en una fila para
+              generar el feedback.
+            </p>
+          </div>
+        </div>
+
+        <div class="filters-row" id="historial-filtros">
+          <label>
+            Equipo
+            <select id="historial-filtro-equipo">
+              <option value="">Todos</option>
+            </select>
+          </label>
+          <label>
+            Asesor
+            <select id="historial-filtro-asesor">
+              <option value="">Todos</option>
+            </select>
+          </label>
+          <label>
+            Desde
+            <input type="date" id="historial-filtro-desde" />
+          </label>
+          <label>
+            Hasta
+            <input type="date" id="historial-filtro-hasta" />
+          </label>
+        </div>
+
+        <div class="card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Asesor</th>
+                  <th>Equipo</th>
+                  <th>Evaluador/a</th>
+                  <th>Score</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="historial-tabla"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Proyecto de portafolio con datos 100% ficticios · Código bajo
+        licencia MIT
+      </p>
+    </footer>
+
+    <!-- ===================== MODAL DE FEEDBACK ===================== -->
+    <div class="modal-overlay" id="modal-feedback">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <div class="modal__head">
+          <h3 id="modal-titulo">Feedback de la llamada</h3>
+          <button class="modal__close" id="modal-cerrar" type="button" aria-label="Cerrar">
+            &times;
+          </button>
+        </div>
+        <div class="modal__body">
+          <pre id="modal-texto"></pre>
+        </div>
+        <div class="modal__foot">
+          <button class="btn btn-ghost" id="modal-cerrar-2" type="button">
+            Cerrar
+          </button>
+          <button class="btn btn-primary" id="modal-copiar" type="button">
+            Copiar feedback
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/seed-fallback.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/evaluacion.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/historial.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
