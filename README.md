@@ -111,11 +111,17 @@ ejemplo"** del header borra lo guardado y vuelve a cargar el seed original.
   clave versionada (`mcc:datos:v1`), con todo el estado de la app
   (asesores, equipos, criterios, evaluadores y evaluaciones).
 
-- **Sin fuentes externas.** La única dependencia externa es Chart.js por
-  CDN, para los gráficos del panel. La tipografía usa una pila de fuentes
-  del sistema (`Iowan Old Style` / `Palatino` / `Georgia` para títulos,
-  sans del sistema para el resto) para no depender de ningún otro
-  servicio externo.
+- **Cero dependencias externas en runtime.** Chart.js está vendorizado en
+  `js/vendor/chart.umd.min.js` en lugar de cargarse desde un CDN. La
+  primera versión usaba `cdnjs.cloudflare.com`, pero en la práctica
+  bastantes visitantes no lo cargan —bloqueadores de anuncios, extensiones
+  de privacidad o proxies corporativos que filtran CDNs de scripts— y el
+  panel quedaba sin gráficos por una causa totalmente ajena a la app. Para
+  un portafolio, donde no controlás qué bloqueador tiene cada visitante,
+  autoalojar la librería es más confiable que depender de un tercero. La
+  tipografía usa una pila de fuentes del sistema (`Iowan Old Style` /
+  `Palatino` / `Georgia` para títulos, sans del sistema para el resto) por
+  el mismo motivo: no depender de ningún servicio externo.
 
 ## Estructura del proyecto
 
@@ -132,6 +138,8 @@ js/
   panel.js             Dashboard: KPIs, gráficos y ranking
   historial.js         Listado filtrable de evaluaciones
   main.js              Arranque de la app y navegación entre vistas
+  vendor/
+    chart.umd.min.js    Chart.js autoalojado (sin dependencias en runtime)
 data/
   seed.json            Datos de ejemplo (100% ficticios)
 favicon.svg
@@ -153,3 +161,6 @@ y entrar a `http://localhost:8000`.
 ## Licencia
 
 MIT. Ver [LICENSE](LICENSE).
+
+`js/vendor/chart.umd.min.js` es una copia sin modificar de
+[Chart.js](https://www.chartjs.org) 4.4.4, también bajo licencia MIT.
